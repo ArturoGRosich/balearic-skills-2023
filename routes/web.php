@@ -16,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
-Route::get('/spaces', [EspaisController::class, 'index'])->name('spaces.index');
+Route::get('/espais', [EspaisController::class, 'index'])->name('spaces.index');
+Route::get('/espais/{espai}', [EspaisController::class, 'show'])->name('espais.show');
 require __DIR__.'/auth.php';

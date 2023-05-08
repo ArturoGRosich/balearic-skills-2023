@@ -48,9 +48,11 @@
             @php $i = 1 @endphp
             </div>
             <div class="card-deck mt-3">
-                <div class="card">
+                    <div class="card">
                     <div class="card-header p-0 d-flex col-12">
-                        <img class="p-0 m-0" style="width:15vw!important; aspect-ratio:1.5 !Important;" src="{{route('index') . ($espai->images->first()->url ?? '/design/papel-pintado-geometrico-moderno-blanco.jpg')}}">
+                        <a class="p-0 m-0" style="width:15vw!important; aspect-ratio:1.5 !Important;"  href="{{route("espais.show", ['espai' => $espai->id])}}">
+                            <img class="p-0 h-100 m-0" style="width:15vw!important; aspect-ratio:1.5 !Important;" src="{{route('index') . ($espai->images->first()->url ?? '/design/papel-pintado-geometrico-moderno-blanco.jpg')}}">
+                        </a>
                         <div class="col-6 pv-0 m-0"> 
                             <h3> 
                                 {{$espai->name}}
@@ -62,11 +64,15 @@
                         </div>
                     </div>
                 </div> 
+                </a>
         @else
             @php $i++ @endphp
+
             <div class="card">
                 <div class="card-header p-0 d-flex col-12">
-                    <img class="p-0 m-0"style="width:15vw!important; aspect-ratio:1.5 !Important;" src="{{route('index') . ($espai->images->first()->url ?? '/design/papel-pintado-geometrico-moderno-blanco.jpg')}}">
+                    <a class="p-0 m-0" style="width:15vw!important; aspect-ratio:1.5 !Important;"  href="{{route("espais.show", ['espai' => $espai->id])}}">
+                        <img class="p-0 h-100 m-0"style="width:15vw!important; aspect-ratio:1.5 !Important;" src="{{route('index') . ($espai->images->first()->url ?? '/design/papel-pintado-geometrico-moderno-blanco.jpg')}}">
+                    </a>
                     <div class="pv-0 m-0 ml-2" style="width:15vw! aspect-ratio:1.5 !important; overflow:hidden"> 
                         <h3> 
                             {{$espai->name}}
@@ -78,6 +84,7 @@
                     </div>
                 </div>
             </div> 
+            </a>
         @endif
     @endforeach
     </main>

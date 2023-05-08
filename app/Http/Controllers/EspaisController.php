@@ -18,4 +18,11 @@ class EspaisController extends Controller
         return view('index', compact('espais', 'search'));
     }
 
+    public function show(Request $data, $id)
+    {
+        $search = Espais::where('id', $id)->first();
+
+        return view('show', compact('search'));
+    }
+
 }
