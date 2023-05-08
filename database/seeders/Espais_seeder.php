@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\AccesibilitatType;
 use App\Models\Arquitecte;
+use App\Models\EspaiImatge;
 use App\Models\Espais;
 use App\Models\EspaiType;
 use App\Models\User;
@@ -53,5 +54,11 @@ class Espais_seeder extends Seeder
 
 
         $espai->save();
+
+        $espaiImatge = new EspaiImatge();
+        $espaiImatge->espai_id = $espai->id;
+        $espaiImatge->slug = 'test';
+        $espaiImatge->url = '/uploads/1-1.jpg';
+        $espaiImatge->save();
     }
 }
