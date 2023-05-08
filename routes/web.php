@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return ['Laravel' => app()->version()];
-});
-
+Route::get('/', [IndexController::class, 'index'])->name('index');
+Route::get('/spaces', [IndexController::class, 'index'])->name('spaces.index');
 require __DIR__.'/auth.php';
