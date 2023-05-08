@@ -9,7 +9,7 @@
 
 <div 
     style="
-        background-image: url(http://localhost:8000/design/papel-pintado-geometrico-moderno-blanco.jpg);
+        background-image: url({{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height:200px;
@@ -35,7 +35,7 @@
     <div class="card-deck">
         <div class="card">
         <div class="card-header p-0 d-flex col-12">
-            <img class="col-6 p-0 m-0" src="http://localhost:8000/design/papel-pintado-geometrico-moderno-blanco.jpg">
+            <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
             <div class="col-6 pv-0 m-0"> 
                 <h3> 
                     title 
@@ -49,7 +49,7 @@
         </div> 
         <div class="card">
         <div class="card-header p-0 d-flex col-12">
-            <img class="col-6 p-0 m-0" src="http://localhost:8000/design/papel-pintado-geometrico-moderno-blanco.jpg">
+            <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
             <div class="col-6 pv-0 m-0"> 
                 <h3> 
                     title 
@@ -63,7 +63,7 @@
         </div>     
         <div class="card">
         <div class="card-header p-0 d-flex col-12">
-            <img class="col-6 p-0 m-0" src="http://localhost:8000/design/papel-pintado-geometrico-moderno-blanco.jpg">
+            <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
             <div class="col-6 pv-0 m-0"> 
                 <h3> 
                     title 
@@ -79,7 +79,7 @@
     <div class="card-deck mt-3">
         <div class="card">
             <div class="card-header p-0 d-flex col-12">
-                <img class="col-6 p-0 m-0" src="http://localhost:8000/design/papel-pintado-geometrico-moderno-blanco.jpg">
+                <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
                 <div class="col-6 pv-0 m-0"> 
                     <h3> 
                         title 
@@ -93,7 +93,7 @@
         </div> 
         <div class="card">
             <div class="card-header p-0 d-flex col-12">
-                <img class="col-6 p-0 m-0" src="http://localhost:8000/design/papel-pintado-geometrico-moderno-blanco.jpg">
+                <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
                 <div class="col-6 pv-0 m-0"> 
                     <h3> 
                         title 
@@ -106,7 +106,7 @@
             </div>
         </div>     <div class="card">
             <div class="card-header p-0 d-flex col-12">
-                <img class="col-6 p-0 m-0" src="http://localhost:8000/design/papel-pintado-geometrico-moderno-blanco.jpg">
+                <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
                 <div class="col-6 pv-0 m-0"> 
                     <h3> 
                         title 
@@ -122,7 +122,7 @@
     <div class="card-deck mt-3">
         <div class="card">
             <div class="card-header p-0 d-flex col-12">
-                <img class="col-6 p-0 m-0" src="http://localhost:8000/design/papel-pintado-geometrico-moderno-blanco.jpg">
+                <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
                 <div class="col-6 pv-0 m-0"> 
                     <h3> 
                         title 
@@ -136,7 +136,7 @@
         </div> 
         <div class="card">
             <div class="card-header p-0 d-flex col-12">
-                <img class="col-6 p-0 m-0" src="http://localhost:8000/design/papel-pintado-geometrico-moderno-blanco.jpg">
+                <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
                 <div class="col-6 pv-0 m-0"> 
                     <h3> 
                         title 
@@ -149,7 +149,7 @@
             </div>
         </div>     <div class="card">
             <div class="card-header p-0 d-flex col-12">
-                <img class="col-6 p-0 m-0" src="http://localhost:8000/design/papel-pintado-geometrico-moderno-blanco.jpg">
+                <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
                 <div class="col-6 pv-0 m-0"> 
                     <h3> 
                         title 
