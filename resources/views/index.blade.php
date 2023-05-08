@@ -6,7 +6,9 @@
 </style>
 @include('head')
 @include('header')
-
+@isset($search)
+<h1 class="p-3"> Aqui tiene sus resultados </h1>
+@else
 <div 
     style="
         background-image: url({{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg);
@@ -19,7 +21,7 @@
 >
         <h1 class="col-12 text-center"> Encuentra tu espacio ideal </h1>
         <form action="{{route('spaces.index')}}" class="col-12 d-flex justify-content-center">
-            <input type="text"  class="wrapper w-50 shadow" style="
+            <input type="text" name="search" class="wrapper w-50 shadow" style="
             background-color: white;
             border: 1px solid grey;
             border-radius: 10px 0px 0px 10px;
@@ -30,137 +32,55 @@
     "> 
         </form>
 </div>
-<h1> sitios de interes </h1>
-<main class="align-self-center col-12"> 
-    <div class="card-deck">
-        <div class="card">
-        <div class="card-header p-0 d-flex col-12">
-            <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
-            <div class="col-6 pv-0 m-0"> 
-                <h3> 
-                    title 
-                </h3>
-                <p>
-                    lore ipsum translated text
-                </p>
-            
+
+<h1 class="p-3"> Sitios de interes </h1>
+@endisset
+
+
+@isset($espais)
+    <main class="p-3">
+        
+    
+    @php $i = 4 @endphp
+    <div>
+    @foreach($espais as $espai)
+        @if($i >= 3) 
+            @php $i = 1 @endphp
             </div>
-        </div>
-        </div> 
-        <div class="card">
-        <div class="card-header p-0 d-flex col-12">
-            <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
-            <div class="col-6 pv-0 m-0"> 
-                <h3> 
-                    title 
-                </h3>
-                <p>
-                    lore ipsum translated text
-                </p>
-            
-            </div>
-        </div>
-        </div>     
-        <div class="card">
-        <div class="card-header p-0 d-flex col-12">
-            <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
-            <div class="col-6 pv-0 m-0"> 
-                <h3> 
-                    title 
-                </h3>
-                <p>
-                    lore ipsum translated text
-                </p>
-            
-            </div>
-        </div>
-        </div> 
-    </div>
-    <div class="card-deck mt-3">
-        <div class="card">
-            <div class="card-header p-0 d-flex col-12">
-                <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
-                <div class="col-6 pv-0 m-0"> 
-                    <h3> 
-                        title 
-                    </h3>
-                    <p>
-                        lore ipsum translated text
-                    </p>
+            <div class="card-deck mt-3">
+                <div class="card">
+                    <div class="card-header p-0 d-flex col-12">
+                        <img class="p-0 m-0" style="width:15vw!important; aspect-ratio:1.5 !Important;" src="{{route('index') . ($espai->images->first()->url ?? '/design/papel-pintado-geometrico-moderno-blanco.jpg')}}">
+                        <div class="col-6 pv-0 m-0"> 
+                            <h3> 
+                                {{$espai->name}}
+                            </h3>
+                            <p>
+                                {{$espai->descripcio ?? 'lore ipsum ...'}}
+                            </p>    
+                        
+                        </div>
+                    </div>
+                </div> 
+        @else
+            @php $i++ @endphp
+            <div class="card">
+                <div class="card-header p-0 d-flex col-12">
+                    <img class="p-0 m-0"style="width:15vw!important; aspect-ratio:1.5 !Important;" src="{{route('index') . ($espai->images->first()->url ?? '/design/papel-pintado-geometrico-moderno-blanco.jpg')}}">
+                    <div class="pv-0 m-0 ml-2" style="width:15vw! aspect-ratio:1.5 !important; overflow:hidden"> 
+                        <h3> 
+                            {{$espai->name}}
+                        </h3>
+                        <p>
+                            {{$espai->descripcio ?? 'lore ipsum ...'}}
+                        </p>    
                 
+                    </div>
                 </div>
-            </div>
-        </div> 
-        <div class="card">
-            <div class="card-header p-0 d-flex col-12">
-                <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
-                <div class="col-6 pv-0 m-0"> 
-                    <h3> 
-                        title 
-                    </h3>
-                    <p>
-                        lore ipsum translated text
-                    </p>
-                
-                </div>
-            </div>
-        </div>     <div class="card">
-            <div class="card-header p-0 d-flex col-12">
-                <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
-                <div class="col-6 pv-0 m-0"> 
-                    <h3> 
-                        title 
-                    </h3>
-                    <p>
-                        lore ipsum translated text
-                    </p>
-                
-                </div>
-            </div>
-        </div> 
-    </div>
-    <div class="card-deck mt-3">
-        <div class="card">
-            <div class="card-header p-0 d-flex col-12">
-                <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
-                <div class="col-6 pv-0 m-0"> 
-                    <h3> 
-                        title 
-                    </h3>
-                    <p>
-                        lore ipsum translated text
-                    </p>
-                
-                </div>
-            </div>
-        </div> 
-        <div class="card">
-            <div class="card-header p-0 d-flex col-12">
-                <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
-                <div class="col-6 pv-0 m-0"> 
-                    <h3> 
-                        title 
-                    </h3>
-                    <p>
-                        lore ipsum translated text
-                    </p>
-                
-                </div>
-            </div>
-        </div>     <div class="card">
-            <div class="card-header p-0 d-flex col-12">
-                <img class="col-6 p-0 m-0" src="{{route('index')}}/design/papel-pintado-geometrico-moderno-blanco.jpg">
-                <div class="col-6 pv-0 m-0"> 
-                    <h3> 
-                        title 
-                    </h3>
-                    <p>
-                        lore ipsum translated text
-                    </p>
-                
-                </div>
-            </div>
-        </div> 
-    </div>
-</main>
+            </div> 
+        @endif
+    @endforeach
+    </main>
+@endisset
+
 @include('footer')

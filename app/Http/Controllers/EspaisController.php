@@ -12,11 +12,10 @@ class EspaisController extends Controller
      */
     public function index(Request $data)
     {
-        $name = $data->get('name');
-        $espais = Espais::where('name', 'LIKE', $name)->with('images')->get();
-        dd($espais);
+        $search = $data->get('search');
+        $espais = Espais::where('name', 'LIKE', '%'.$search.'%')->with('images')->get();
 
-        return view('index', compact('espais'));
+        return view('index', compact('espais', 'search'));
     }
 
 }

@@ -12,6 +12,10 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $espais = Espais::with('images')->paginate(9);
+
+
+        return view('index', compact('espais'));
+        
     }
 }
