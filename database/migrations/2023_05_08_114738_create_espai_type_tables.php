@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('arquitecte', function (Blueprint $table) {
+        Schema::create('espai_types', function (Blueprint $table) {
             $table->id();
             $table->string('name', 30);
-            $table->string('university', 30);
         });
     }
 
@@ -23,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('arquitecte');
+        Schema::dropIfExists('espai_types');
     }
 };

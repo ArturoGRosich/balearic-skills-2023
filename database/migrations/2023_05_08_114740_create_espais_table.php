@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('modalitat_art', 30);
             $table->foreignId('arquitecte_id');
             $table->timestamp('any_construcció');
-            $table->foreignId('accesibilitat_type_id')->references('id')->on('accesibilitat_type');
+            $table->foreignId('accesibilitat_type_id')->references('id')->on('accesibilitat_types');
             $table->foreignId('gestor_id')->references('id')->on('users');
             $table->boolean('is_destacat');
         });
